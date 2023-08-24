@@ -1,5 +1,3 @@
-import time
-
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework.filters import SearchFilter
 from rest_framework.generics import ListAPIView
@@ -14,7 +12,3 @@ class ProblemListView(ListAPIView):
     filter_backends = [SearchFilter, DjangoFilterBackend]
     filterset_fields = ['topic']
     search_fields = ['content']
-
-    def list(self, request, *args, **kwargs):
-        time.sleep(2)
-        return super().list(request, *args, **kwargs)

@@ -1,3 +1,5 @@
+import time
+
 from rest_framework.generics import ListAPIView
 
 from topic.models import Topic
